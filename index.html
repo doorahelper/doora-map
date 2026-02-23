@@ -372,7 +372,7 @@ function normalizeName(name) {
 async function loadData() {
   try {
     const [clusterResp, geoResp] = await Promise.all([
-      fetch('doora_v5_clusters.json'),
+      fetch('doora_v6_clusters.json'),
       fetch('sydney_suburbs.geojson'),
     ]);
 
@@ -397,7 +397,7 @@ async function loadData() {
   } catch (err) {
     console.error('Failed to load data:', err);
     document.getElementById('cluster-detail').innerHTML =
-      '<div style="color:#ff6b6b;padding:20px">Error loading data. Make sure doora_v5_clusters.json and sydney_suburbs.geojson are in the same directory.</div>';
+      '<div style="color:#ff6b6b;padding:20px">Error loading data. Make sure doora_v6_clusters.json and sydney_suburbs.geojson are in the same directory.</div>';
   }
 }
 
