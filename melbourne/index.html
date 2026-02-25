@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOORA Vision Assistant — Melbourne</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --sidebar-width: 370px;
+  --bg-dark: #1a1a2e;
+  --bg-panel: #16213e;
+  --bg-card: #1c2a4a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #a0a8c0;
+  --accent: #4fc3f7;
+  --accent-hover: #29b6f6;
+  --border: #2a3a5c;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ─── Sidebar ─── */
+#sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--bg-panel);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+#sidebar-header {
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #0f3460, #1a1a5e);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#sidebar-header h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+#sidebar-header .subtitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* Zone filter */
+#zone-filter-container {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#zone-filter {
+  width: 100%;
+  padding: 7px 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#zone-filter option { background: var(--bg-card); }
+
+/* Cluster button grid */
+#cluster-grid {
+  padding: 10px 14px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  max-height: 200px;
+  border-bottom: 1px solid var(--border);
+}
+
+#cluster-grid .zone-group {
+  margin-bottom: 8px;
+}
+
+#cluster-grid .zone-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+#cluster-grid .zone-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cluster-btn {
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.15s;
+  opacity: 0.85;
+}
+
+.cluster-btn:hover { opacity: 1; transform: scale(1.05); }
+.cluster-btn.active { opacity: 1; outline: 2px solid #fff; outline-offset: 1px; }
+
+/* Cluster detail panel */
+#cluster-detail {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+}
+
+#cluster-detail.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.detail-header {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.detail-cluster-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.detail-section-body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.suburb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.suburb-tag {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+/* Connects-to buttons */
+.connects-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.connect-btn {
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: var(--bg-card);
+  transition: all 0.15s;
+}
+
+.connect-btn:hover {
+  border-color: var(--accent);
+  background: rgba(79, 195, 247, 0.15);
+}
+
+/* Amenities */
+.amenity-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.amenity-icon { font-size: 14px; }
+.amenity-count { font-weight: 700; color: var(--accent); }
+.amenity-label { color: var(--text-secondary); }
+
+.amenity-names {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-left: 20px;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.amenity-loading {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Talking summary */
+.talking-summary {
+  background: linear-gradient(135deg, #0f3460, #1a2950);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #fff;
+  position: relative;
+}
+
+.talking-summary::before {
+  content: 'TALKING SUMMARY';
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* ─── Map ─── */
+#map-container {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+}
+
+#map { width: 100%; height: 100%; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  #sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: 45vh;
+  }
+  #map-container { height: 55vh; }
+  #cluster-grid { max-height: 120px; }
+}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="sidebar-header">
+    <h1>DOORA Vision Assistant</h1>
+    <div class="subtitle">Melbourne Service Centre Tool</div>
+  </div>
+
+  <div id="zone-filter-container">
+    <select id="zone-filter">
+      <option value="all">All Zones</option>
+    </select>
+  </div>
+
+  <div id="cluster-grid"></div>
+
+  <div id="cluster-detail" class="empty">
+    <div>
+      <div style="font-size: 28px; margin-bottom: 10px;">&#128506;</div>
+      <div style="font-size: 14px;">Select a cluster to view details</div>
+      <div style="font-size: 12px; margin-top: 4px;">Click any button above or a polygon on the map</div>
+    </div>
+  </div>
+</div>
+
+<div id="map-container">
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+'use strict';
+
+// ─── Melbourne Zone Colours (15 zones) ───
+const ZONE_COLOURS = {
+  'Inner Melbourne':         '#FF6B6B',
+  'Inner North':             '#FF8E72',
+  'Inner East':              '#4ECDC4',
+  'Inner South':             '#45B7D1',
+  'North East':              '#96CEB4',
+  'South East':              '#9B59B6',
+  'Inner West':              '#F39C12',
+  'Western Suburbs':         '#E74C3C',
+  'Northwest':               '#2ECC71',
+  'Bayside':                 '#1ABC9C',
+  'Mornington Peninsula':    '#E67E22',
+  'Frankston & SE Growth':   '#3498DB',
+  'Middle South East':       '#8E44AD',
+  'Geelong & Bellarine':     '#16A085',
+  'Outer West':              '#D35400',
+};
+
+// ─── State ───
+let clusterData = null;
+let suburbGeoJSON = null;
+let clusterLookup = {};
+let suburbToCluster = {};
+let suburbZoneColour = {};
+let selectedCluster = null;
+let highlightLayer = null;
+let amenityCache = {};
+
+// ─── Map Setup (Melbourne) ───
+const map = L.map('map', {
+  center: [-37.81, 144.96],
+  zoom: 10,
+  zoomControl: true,
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors | ABS 2021 SAL boundaries',
+  maxZoom: 19,
+}).addTo(map);
+
+highlightLayer = L.geoJSON(null, {
+  style: () => ({}),
+  onEachFeature: () => {},
+}).addTo(map);
+
+// ─── Normalize suburb name for matching ───
+function normalizeName(name) {
+  return name
+    .replace(/\s*\(.*?\)\s*/g, '')
+    .toLowerCase()
+    .replace(/['\u2019]/g, '')
+    .replace(/\bsaint\b/g, 'st')
+    .replace(/\bst\.\s*/g, 'st ')
+    .replace(/[-\u2013\u2014]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// ─── Special name mappings for Melbourne ───
+const NAME_ALIASES = {
+  'melbourne cbd': 'melbourne',
+  'geelong cbd': 'geelong',
+  'herne hills': 'herne hill',
+};
+
+function resolveSuburbName(name) {
+  const norm = normalizeName(name);
+  return NAME_ALIASES[norm] || norm;
+}
+
+// ─── Load Data ───
+async function loadData() {
+  try {
+    const [clusterResp, geoResp] = await Promise.all([
+      fetch('doora_melbourne_v1_clusters.json'),
+      fetch('melbourne_suburbs.geojson'),
+    ]);
+
+    clusterData = await clusterResp.json();
+    suburbGeoJSON = await geoResp.json();
+
+    // Build lookup tables
+    clusterData.clusters.forEach(c => {
+      clusterLookup[c.cc] = c;
+      const zoneColour = ZONE_COLOURS[c.zone] || '#888';
+      c.suburbs.forEach(s => {
+        const norm = resolveSuburbName(s);
+        if (!suburbToCluster[norm]) suburbToCluster[norm] = [];
+        suburbToCluster[norm].push(c.cc);
+        suburbZoneColour[norm] = zoneColour;
+      });
+    });
+
+    buildSidebar();
+    addAllPolygonsToMap();
+
+  } catch (err) {
+    console.error('Failed to load data:', err);
+    document.getElementById('cluster-detail').innerHTML =
+      '<div style="color:#ff6b6b;padding:20px">Error loading data. Make sure doora_melbourne_v1_clusters.json and melbourne_suburbs.geojson are in the same directory.</div>';
+  }
+}
+
+// ─── Build Sidebar ───
+function buildSidebar() {
+  const zones = [...new Set(clusterData.clusters.map(c => c.zone))];
+  const zoneFilter = document.getElementById('zone-filter');
+
+  zones.forEach(z => {
+    const opt = document.createElement('option');
+    opt.value = z;
+    opt.textContent = z;
+    zoneFilter.appendChild(opt);
+  });
+
+  zoneFilter.addEventListener('change', () => filterClusters(zoneFilter.value));
+  renderClusterGrid(zones, 'all');
+}
+
+function renderClusterGrid(zones, filter) {
+  const grid = document.getElementById('cluster-grid');
+  grid.innerHTML = '';
+
+  zones.forEach(zone => {
+    if (filter !== 'all' && filter !== zone) return;
+
+    const colour = ZONE_COLOURS[zone] || '#888';
+    const clusters = clusterData.clusters.filter(c => c.zone === zone);
+
+    const group = document.createElement('div');
+    group.className = 'zone-group';
+
+    const label = document.createElement('div');
+    label.className = 'zone-label';
+    label.style.color = colour;
+    label.textContent = zone;
+    group.appendChild(label);
+
+    const btns = document.createElement('div');
+    btns.className = 'zone-buttons';
+
+    clusters.forEach(c => {
+      const btn = document.createElement('button');
+      btn.className = 'cluster-btn';
+      btn.dataset.cc = c.cc;
+      btn.textContent = c.cc;
+      btn.style.background = colour;
+      btn.title = c.name;
+      btn.addEventListener('click', () => selectCluster(c.cc));
+      btns.appendChild(btn);
+    });
+
+    group.appendChild(btns);
+    grid.appendChild(group);
+  });
+}
+
+function filterClusters(filter) {
+  const zones = [...new Set(clusterData.clusters.map(c => c.zone))];
+  renderClusterGrid(zones, filter);
+  if (selectedCluster) {
+    const btn = document.querySelector(`.cluster-btn[data-cc="${selectedCluster}"]`);
+    if (btn) btn.classList.add('active');
+  }
+}
+
+// ─── Add all suburb polygons to map (zone-coloured base layer) ───
+function addAllPolygonsToMap() {
+  if (!suburbGeoJSON) return;
+
+  L.geoJSON(suburbGeoJSON, {
+    style: (feature) => {
+      const name = feature.properties.suburb || feature.properties.sal_name;
+      const norm = normalizeName(name);
+      const colour = suburbZoneColour[norm] || '#4a5568';
+      return {
+        color: '#000000',
+        weight: 1.5,
+        fillColor: colour,
+        fillOpacity: 0.18,
+        opacity: 0.55,
+      };
+    },
+    onEachFeature: (feature, layer) => {
+      const suburbName = feature.properties.suburb || feature.properties.sal_name;
+      const norm = normalizeName(suburbName);
+      const clusterCodes = suburbToCluster[norm];
+
+      if (clusterCodes && clusterCodes.length > 0) {
+        layer.on('click', () => selectCluster(clusterCodes[0]));
+
+        layer.on('mouseover', (e) => {
+          e.target.setStyle({
+            fillOpacity: 0.40,
+            weight: 2.5,
+            opacity: 0.8,
+          });
+          e.target.bringToFront();
+        });
+        layer.on('mouseout', (e) => {
+          e.target.setStyle({
+            fillOpacity: 0.18,
+            weight: 1.5,
+            opacity: 0.55,
+          });
+        });
+      }
+    },
+  }).addTo(map);
+}
+
+// ─── Select Cluster ───
+function selectCluster(cc) {
+  const cluster = clusterLookup[cc];
+  if (!cluster) return;
+
+  selectedCluster = cc;
+
+  document.querySelectorAll('.cluster-btn').forEach(b => b.classList.remove('active'));
+  const activeBtn = document.querySelector(`.cluster-btn[data-cc="${cc}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  highlightClusterPolygons(cluster);
+  renderClusterDetail(cluster);
+
+  if (!amenityCache[cc]) {
+    fetchAmenities(cluster);
+  } else {
+    renderAmenities(cc);
+  }
+}
+
+// ─── Highlight polygons ───
+function highlightClusterPolygons(cluster) {
+  if (highlightLayer) { map.removeLayer(highlightLayer); }
+  if (!suburbGeoJSON) return;
+
+  const colour = ZONE_COLOURS[cluster.zone] || '#888';
+  const suburbNorms = new Set(cluster.suburbs.map(s => resolveSuburbName(s)));
+
+  const matchedFeatures = suburbGeoJSON.features.filter(f => {
+    const name = f.properties.suburb || f.properties.sal_name;
+    return suburbNorms.has(normalizeName(name));
+  });
+
+  if (matchedFeatures.length === 0) return;
+
+  const geojsonData = { type: 'FeatureCollection', features: matchedFeatures };
+
+  highlightLayer = L.geoJSON(geojsonData, {
+    style: {
+      color: '#000000',
+      weight: 3,
+      fillColor: colour,
+      fillOpacity: 0.35,
+      opacity: 0.9,
+    },
+    interactive: false,
+  }).addTo(map);
+
+  const bounds = highlightLayer.getBounds();
+  if (bounds.isValid()) {
+    map.flyToBounds(bounds, { padding: [50, 50], maxZoom: 14, duration: 0.8 });
+  }
+}
+
+// ─── Render Cluster Detail ───
+function renderClusterDetail(cluster) {
+  const detail = document.getElementById('cluster-detail');
+  detail.classList.remove('empty');
+  const colour = ZONE_COLOURS[cluster.zone] || '#888';
+
+  detail.innerHTML = `
+    <div class="detail-header" style="color:${colour}">${cluster.cc}</div>
+    <div class="detail-cluster-name">${cluster.name}</div>
+
+    <div class="detail-section">
+      <div class="detail-section-title">Suburbs</div>
+      <div class="suburb-list">
+        ${cluster.suburbs.map(s => `<span class="suburb-tag">${s}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-title">Core Access Corridors</div>
+      <div class="detail-section-body">${cluster.corridors}</div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-title">Connects To</div>
+      <div class="connects-buttons">
+        ${cluster.connects.map(cc => {
+          const linked = clusterLookup[cc];
+          const lColour = linked ? (ZONE_COLOURS[linked.zone] || '#888') : '#888';
+          return `<button class="connect-btn" style="border-color:${lColour}" onclick="window._selectCluster('${cc}')" title="${linked ? linked.name : cc}">${cc}</button>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <div class="detail-section" id="amenities-${cluster.cc}">
+      <div class="detail-section-title">Environment & Amenities</div>
+      <div class="amenity-loading">Loading amenities...</div>
+    </div>
+
+    <div class="detail-section" id="summary-${cluster.cc}">
+      ${generateTalkingSummary(cluster, null)}
+    </div>
+  `;
+}
+
+// ─── Talking Summary Generator (Melbourne-specific) ───
+function generateTalkingSummary(cluster, amenities) {
+  const suburbs = cluster.suburbs;
+  const first = suburbs[0];
+  const last = suburbs.length > 1 ? suburbs[suburbs.length - 1] : null;
+  const areaLabel = last ? `${first} to ${last}` : first;
+
+  // Extract transport info from corridors
+  let transportSnippet = '';
+  const corridors = cluster.corridors;
+
+  // Match station names: "Name Station" (capitalized) or "Name and Name stations" (lowercase plural)
+  const stationMatch = corridors.match(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})\s+[Ss]tation/)
+    || corridors.match(/\b([A-Z][a-z]+(?:\s+and\s+[A-Z][a-z]+)?)\s+stations/i);
+  const timeMatch = corridors.match(/[\u2248~]?\s*(\d+[-\u2013]\d+|\d+)\s*min/i);
+  const timeStr = timeMatch ? ` (~${timeMatch[1].replace('\u2013', '-')} min to CBD)` : '';
+
+  // Melbourne-specific: detect tram routes (but not bus routes)
+  const tramMatch = corridors.match(/\bTram\s+(\d+)/i) || corridors.match(/\bTram\s+Route\s+(\d+)/i);
+
+  // Clean station name — remove "Line" prefix that leaks from "V/Line"
+  const stationName = stationMatch ? stationMatch[1].replace(/^Line\s+/i, '') : null;
+
+  if (corridors.match(/v\/line/i)) {
+    const vlineStation = stationName ? ` from ${stationName} Station` : '';
+    transportSnippet = `V/Line regional rail${vlineStation} to Melbourne CBD${timeStr}`;
+  } else if (corridors.match(/metro tunnel/i) && stationName) {
+    transportSnippet = `Metro Tunnel rail from ${stationName} Station${timeStr}`;
+  } else if (corridors.match(/ferry|wharf/i)) {
+    transportSnippet = `Ferry to CBD${timeStr}`;
+  } else if (stationName && tramMatch) {
+    transportSnippet = `Train from ${stationName} Station + Tram ${tramMatch[1]}${timeStr}`;
+  } else if (stationName) {
+    transportSnippet = `Train from ${stationName} Station${timeStr}`;
+  } else if (tramMatch) {
+    transportSnippet = `Tram ${tramMatch[1]} to CBD${timeStr}`;
+  } else if (corridors.match(/tram/i)) {
+    transportSnippet = `Tram connections to CBD${timeStr}`;
+  } else if (corridors.match(/bus/i)) {
+    transportSnippet = `Bus connections${timeStr}`;
+  } else {
+    transportSnippet = `Transport links via major corridors${timeStr}`;
+  }
+
+  // Melbourne zone character descriptions
+  const zoneCharacter = {
+    'Inner Melbourne':         'cosmopolitan CBD living with comprehensive tram and train access',
+    'Inner North':             'creative, cafe-rich neighbourhoods with tram and train links',
+    'Inner East':              'leafy heritage suburbs with strong school zones and rail access',
+    'Inner South':             'bayside lifestyle with tram connections and village-feel streets',
+    'North East':              'riverside family suburbs with Hurstbridge Line rail access',
+    'South East':              'established multicultural suburbs with Cranbourne/Pakenham Line access',
+    'Inner West':              'revitalised industrial-chic villages with Werribee/Williamstown Line rail',
+    'Western Suburbs':         'affordable growing suburbs with Sunbury Line metro tunnel access',
+    'Northwest':               'established family suburbs along the Craigieburn Line corridor',
+    'Bayside':                 'premium beachside living on the Sandringham and Frankston Lines',
+    'Mornington Peninsula':    'coastal and hinterland lifestyle with limited bus connections',
+    'Frankston & SE Growth':   'growing family suburbs with expanding rail and freeway access',
+    'Middle South East':       'multicultural family suburbs with Frankston Line bayside rail',
+    'Geelong & Bellarine':     'regional city living with V/Line commuter rail to Melbourne',
+    'Outer West':              'rapidly growing new suburbs with expanding Werribee Line services',
+  };
+
+  const character = zoneCharacter[cluster.zone] || 'established residential area';
+
+  let amenitySentence = '';
+  if (amenities) {
+    const parts = [];
+    if (amenities.schools > 0) parts.push(`${amenities.schools} schools`);
+    if (amenities.parks > 0) parts.push(`${amenities.parks} parks`);
+    if (amenities.libraries > 0) parts.push(`${amenities.libraries} libraries`);
+    if (parts.length > 0) amenitySentence = ` The area has ${parts.join(', ')}.`;
+  }
+
+  const summary = `${areaLabel} — ${character}.${amenitySentence} ${transportSnippet}.`;
+
+  return `<div class="talking-summary">${summary}</div>`;
+}
+
+// ─── Overpass API Amenity Lookup ───
+async function fetchAmenities(cluster) {
+  const cc = cluster.cc;
+
+  const suburbNorms = new Set(cluster.suburbs.map(s => resolveSuburbName(s)));
+  const matchedFeatures = suburbGeoJSON.features.filter(f => {
+    const name = f.properties.suburb || f.properties.sal_name;
+    return suburbNorms.has(normalizeName(name));
+  });
+
+  if (matchedFeatures.length === 0) {
+    amenityCache[cc] = { schools: 0, parks: 0, libraries: 0, hospitals: 0, supermarkets: 0, schoolNames: [], parkNames: [], libraryNames: [] };
+    renderAmenities(cc);
+    return;
+  }
+
+  let minLat = 90, maxLat = -90, minLon = 180, maxLon = -180;
+  matchedFeatures.forEach(f => {
+    const coords = extractAllCoords(f.geometry);
+    coords.forEach(([lon, lat]) => {
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lon < minLon) minLon = lon;
+      if (lon > maxLon) maxLon = lon;
+    });
+  });
+
+  const bbox = `${minLat},${minLon},${maxLat},${maxLon}`;
+
+  const query = `
+    [out:json][timeout:25];
+    (
+      node["amenity"="school"](${bbox});
+      way["amenity"="school"](${bbox});
+      node["leisure"="park"](${bbox});
+      way["leisure"="park"](${bbox});
+      node["amenity"="library"](${bbox});
+      way["amenity"="library"](${bbox});
+      node["amenity"="hospital"](${bbox});
+      way["amenity"="hospital"](${bbox});
+      node["shop"="supermarket"](${bbox});
+      way["shop"="supermarket"](${bbox});
+    );
+    out tags;
+  `;
+
+  try {
+    const resp = await fetch('https://overpass-api.de/api/interpreter', {
+      method: 'POST',
+      body: `data=${encodeURIComponent(query)}`,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    });
+    const data = await resp.json();
+
+    const schools = new Set();
+    const parks = new Set();
+    const libraries = new Set();
+    let hospitals = 0;
+    let supermarkets = 0;
+
+    data.elements.forEach(el => {
+      const name = el.tags?.name || '';
+      if (el.tags?.amenity === 'school') schools.add(name || `School ${schools.size + 1}`);
+      else if (el.tags?.leisure === 'park') parks.add(name || `Park ${parks.size + 1}`);
+      else if (el.tags?.amenity === 'library') libraries.add(name || `Library ${libraries.size + 1}`);
+      else if (el.tags?.amenity === 'hospital') hospitals++;
+      else if (el.tags?.shop === 'supermarket') supermarkets++;
+    });
+
+    amenityCache[cc] = {
+      schools: schools.size,
+      parks: parks.size,
+      libraries: libraries.size,
+      hospitals,
+      supermarkets,
+      schoolNames: [...schools].filter(n => !n.startsWith('School ')).slice(0, 8),
+      parkNames: [...parks].filter(n => !n.startsWith('Park ')).slice(0, 8),
+      libraryNames: [...libraries].filter(n => !n.startsWith('Library ')).slice(0, 5),
+    };
+  } catch (err) {
+    console.warn(`Amenity fetch failed for ${cc}:`, err);
+    amenityCache[cc] = { schools: 0, parks: 0, libraries: 0, hospitals: 0, supermarkets: 0, schoolNames: [], parkNames: [], libraryNames: [], error: true };
+  }
+
+  renderAmenities(cc);
+}
+
+function extractAllCoords(geometry) {
+  const coords = [];
+  if (geometry.type === 'Polygon') {
+    geometry.coordinates[0].forEach(c => coords.push(c));
+  } else if (geometry.type === 'MultiPolygon') {
+    geometry.coordinates.forEach(poly => poly[0].forEach(c => coords.push(c)));
+  }
+  return coords;
+}
+
+function renderAmenities(cc) {
+  const el = document.getElementById(`amenities-${cc}`);
+  if (!el) return;
+
+  const a = amenityCache[cc];
+  if (!a) return;
+
+  if (a.error) {
+    el.innerHTML = `
+      <div class="detail-section-title">Environment & Amenities</div>
+      <div class="amenity-loading">Amenity data unavailable — try refreshing</div>
+    `;
+    return;
+  }
+
+  let html = '<div class="detail-section-title">Environment & Amenities</div>';
+
+  const items = [
+    { icon: '&#127979;', count: a.schools, label: 'Schools', names: a.schoolNames },
+    { icon: '&#127795;', count: a.parks, label: 'Parks', names: a.parkNames },
+    { icon: '&#128218;', count: a.libraries, label: 'Libraries', names: a.libraryNames },
+    { icon: '&#127975;', count: a.hospitals, label: 'Hospitals', names: [] },
+    { icon: '&#128722;', count: a.supermarkets, label: 'Supermarkets', names: [] },
+  ];
+
+  items.forEach(item => {
+    html += `<div class="amenity-row">
+      <span class="amenity-icon">${item.icon}</span>
+      <span class="amenity-count">${item.count}</span>
+      <span class="amenity-label">${item.label}</span>
+    </div>`;
+    if (item.names.length > 0) {
+      html += `<div class="amenity-names">${item.names.join(', ')}</div>`;
+    }
+  });
+
+  el.innerHTML = html;
+  updateTalkingSummary(cc);
+}
+
+function updateTalkingSummary(cc) {
+  const el = document.getElementById(`summary-${cc}`);
+  if (!el) return;
+
+  const cluster = clusterLookup[cc];
+  const amenities = amenityCache[cc];
+
+  el.innerHTML = generateTalkingSummary(cluster, amenities);
+}
+
+// ─── Global function for onclick in connects-to buttons ───
+window._selectCluster = selectCluster;
+
+// ─── Init ───
+loadData();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2216 @@
+{
+  "version": "1.0",
+  "city": "Melbourne",
+  "total_clusters": 127,
+  "clusters": [
+    {
+      "cc": "IM1",
+      "name": "The CBD Core",
+      "suburbs": [
+        "Melbourne CBD",
+        "Docklands"
+      ],
+      "corridors": "Central transport hub with Flinders Street Station serving Frankston, Sandringham, and City Loop lines, and Southern Cross Station providing regional V/Line access. Metro Tunnel stations State Library and Town Hall serve the Sunbury, Cranbourne, and Pakenham lines. Melbourne Central Station connects the City Loop. Free Tram Zone covers the CBD with tram routes 1, 6, 16, 30, 35, 109 operating through Collins, Bourke, and Swanston Streets.",
+      "alias": "IM1 – The CBD Core",
+      "connects": [
+        "IM2",
+        "IM3",
+        "IM4",
+        "IM6"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IM6",
+      "name": "West Melbourne",
+      "suburbs": [
+        "West Melbourne"
+      ],
+      "corridors": "Flagstaff Station on the City Loop provides rail access via Frankston, Craigieburn, and other loop services. Southern Cross Station is accessible via short walk. Tram 30 and 35 run through Spencer Street and King Street connecting to the broader Free Tram Zone and CBD.",
+      "alias": "IM6 – West Melbourne",
+      "connects": [
+        "IM1",
+        "IM2",
+        "IM4",
+        "IW2"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IM3",
+      "name": "Southbank-Port Melbourne Corridor",
+      "suburbs": [
+        "Port Melbourne",
+        "South Melbourne",
+        "Southbank"
+      ],
+      "corridors": "Tram-centric corridor with Route 109 serving Port Melbourne, Route 96 through South Melbourne, and Route 1 extending to South Melbourne Beach. City Road and Clarendon Street are key traffic corridors. Southern Cross Station is accessible via short tram connection.",
+      "alias": "IM3 – Southbank-Port Melbourne Corridor",
+      "connects": [
+        "IM1",
+        "IM4",
+        "IM5",
+        "IS1"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IM4",
+      "name": "South Wharf Precinct",
+      "suburbs": [
+        "South Wharf",
+        "Southbank"
+      ],
+      "corridors": "Located near Southern Cross Station providing direct access to Sunbury, Werribee, and Williamstown lines via short walking distance. Tram routes operate along Clarendon Street with connections to the wider network. Citylink freeway provides vehicular connectivity to outer suburbs.",
+      "alias": "IM4 – South Wharf Precinct",
+      "connects": [
+        "IM1",
+        "IM3",
+        "IM6"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IM5",
+      "name": "The Parkville-University Belt",
+      "suburbs": [
+        "Parkville",
+        "North Melbourne",
+        "Carlton"
+      ],
+      "corridors": "Melbourne Central Station and nearby Flinders Street Station provide rail access to all Metro lines. Tram 19, 58, and 59 traverse Royal Parade and Flemington Road connecting the University of Melbourne precinct and Royal Melbourne Hospital. Direct proximity to the Free Tram Zone.",
+      "alias": "IM5 – The Parkville-University Belt",
+      "connects": [
+        "IM1",
+        "IM2",
+        "IN1",
+        "IN2",
+        "IN6"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IM2",
+      "name": "North Melbourne-Kensington Gateway",
+      "suburbs": [
+        "North Melbourne",
+        "Kensington"
+      ],
+      "corridors": "North Melbourne Station on the Craigieburn, Upfield, Werribee, and Williamstown lines provides multi-directional rail access. Kensington Station serves the Werribee and Williamstown lines. Tram 57, 58, and 59 run along Flemington Road and Macaulay Road.",
+      "alias": "IM2 – North Melbourne-Kensington Gateway",
+      "connects": [
+        "IM1",
+        "IM5",
+        "IM6",
+        "NW1"
+      ],
+      "zone": "Inner Melbourne"
+    },
+    {
+      "cc": "IN1",
+      "name": "The Fitzroy-Carlton Creative Belt",
+      "suburbs": [
+        "Carlton",
+        "Fitzroy",
+        "Collingwood"
+      ],
+      "corridors": "Tram 86 runs along Smith Street serving Fitzroy and Collingwood, while Tram 11 traverses Brunswick Street. Tram 96 extends along Nicholson Street. Lygon Street in Carlton is the main dining and shopping strip. Parliament Station and Collingwood Station provide nearest rail access.",
+      "alias": "IN1 – The Fitzroy-Carlton Creative Belt",
+      "connects": [
+        "IM1",
+        "IM5",
+        "IE1",
+        "IN2",
+        "IN5"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IN2",
+      "name": "The Northern Crest",
+      "suburbs": [
+        "Princes Hill",
+        "Carlton North",
+        "Fitzroy North"
+      ],
+      "corridors": "Rushall Station on the Mernda Line provides rail access. Tram 96 runs along Nicholson Street and Tram 11 extends through Brunswick Street. Rathdowne Street is a key arterial connecting the precinct to Carlton and the CBD.",
+      "alias": "IN2 – The Northern Crest",
+      "connects": [
+        "IM5",
+        "IN1",
+        "IN3",
+        "IN5",
+        "IN6"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IN5",
+      "name": "The Brunswick East Connection",
+      "suburbs": [
+        "Brunswick East",
+        "Fitzroy North",
+        "Northcote"
+      ],
+      "corridors": "Rushall Station on the Mernda Line provides rail interchange. Tram 96 traverses Nicholson Street connecting to the CBD. Lygon Street and St Georges Road are key traffic corridors. Merri Creek provides a green space and cycling corridor.",
+      "alias": "IN5 – The Brunswick East Connection",
+      "connects": [
+        "IN1",
+        "IN2",
+        "IN3",
+        "IN6"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IN3",
+      "name": "Northcote-Thornbury Corridor",
+      "suburbs": [
+        "Thornbury",
+        "Northcote"
+      ],
+      "corridors": "Thornbury Station and Northcote Station both serve the Mernda Line providing direct rail access to the CBD. High Street Northcote is a major shopping and dining strip. Tram 86 operates along Plenty Road and St Georges Road provides secondary connectivity.",
+      "alias": "IN3 – Northcote-Thornbury Corridor",
+      "connects": [
+        "IN2",
+        "IN4",
+        "IN5",
+        "NE5"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IN4",
+      "name": "The Preston Hub",
+      "suburbs": [
+        "Bellfield",
+        "Preston",
+        "Thornbury"
+      ],
+      "corridors": "Preston Station and Bell Station on the Mernda Line provide rail access to the city. High Street Preston is a major shopping strip. Tram 86 operates along Plenty Road. Bell Street is a key east-west arterial.",
+      "alias": "IN4 – The Preston Hub",
+      "connects": [
+        "IN3",
+        "IN6",
+        "NE4"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IN6",
+      "name": "The Brunswick-Coburg Spine",
+      "suburbs": [
+        "Brunswick",
+        "Brunswick West",
+        "Coburg"
+      ],
+      "corridors": "Brunswick Station and Coburg Station on the Upfield Line provide direct rail access to the CBD. Sydney Road features Tram 19 as the primary north-south corridor. Tram 58 operates along Melville Road. Bell Street provides east-west connectivity. Upfield bike path offers alternative transport.",
+      "alias": "IN6 – The Brunswick-Coburg Spine",
+      "connects": [
+        "IM2",
+        "IM5",
+        "IN2",
+        "IN4",
+        "IN5",
+        "NW1"
+      ],
+      "zone": "Inner North"
+    },
+    {
+      "cc": "IE1",
+      "name": "East Melbourne Gateway",
+      "suburbs": [
+        "East Melbourne",
+        "Collingwood"
+      ],
+      "corridors": "Collingwood Station serves the Mernda and Hurstbridge lines. Jolimont Station (Belgrave/Lilydale/Glen Waverley/Alamein lines) provides interchange access. Hoddle Street and Victoria Parade form key arterials. Tram 48 and 75 run along Wellington Parade.",
+      "alias": "IE1 – East Melbourne Gateway",
+      "connects": [
+        "IM1",
+        "IN1",
+        "IE2"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE2",
+      "name": "The Richmond Hub",
+      "suburbs": [
+        "East Melbourne",
+        "Richmond",
+        "Cremorne"
+      ],
+      "corridors": "Richmond Station is a major interchange serving Alamein, Belgrave, Frankston, Glen Waverley, Lilydale, and Sandringham lines (Cranbourne/Pakenham now bypass via Metro Tunnel). Bridge Road, Swan Street, and Church Street are primary retail corridors. Tram 70 and 78 provide direct city connections.",
+      "alias": "IE2 – The Richmond Hub",
+      "connects": [
+        "IE1",
+        "IE3",
+        "IS2"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE3",
+      "name": "Cremorne-Burnley Pocket",
+      "suburbs": [
+        "Cremorne",
+        "Burnley"
+      ],
+      "corridors": "Burnley Station (Alamein/Belgrave/Glen Waverley/Lilydale lines) provides rail access. CityLink/Monash Freeway interchange provides east-west arterial access. Church Street and Swan Street extension form local corridors. Tram 70 extends through Cremorne.",
+      "alias": "IE3 – Cremorne-Burnley Pocket",
+      "connects": [
+        "IE2",
+        "IE4",
+        "IE7"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE7",
+      "name": "Hawthorn Heritage Core",
+      "suburbs": [
+        "Hawthorn",
+        "Hawthorn East"
+      ],
+      "corridors": "Hawthorn and Glenferrie stations (Belgrave/Lilydale/Alamein lines) serve this heritage precinct. Glenferrie Road is a major shopping strip. Tram 16 runs along Glenferrie Road and Tram 75 along Burwood Road toward the city.",
+      "alias": "IE7 – Hawthorn Heritage Core",
+      "connects": [
+        "IE3",
+        "IE5",
+        "IE6",
+        "IE10"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE10",
+      "name": "Kew Riverside",
+      "suburbs": [
+        "Kew",
+        "Hawthorn"
+      ],
+      "corridors": "Glenferrie Station (Belgrave/Lilydale/Alamein lines) provides primary rail access. Tram 16 runs along Glenferrie Road through Kew. High Street Kew and Cotham Road form heritage shopping strips. Studley Park and Yarra River corridor provide greenway links.",
+      "alias": "IE10 – Kew Riverside",
+      "connects": [
+        "IE7",
+        "IE9",
+        "IE11",
+        "NE2"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE6",
+      "name": "The Camberwell Junction",
+      "suburbs": [
+        "Camberwell",
+        "Hawthorn East",
+        "Canterbury"
+      ],
+      "corridors": "Camberwell Station (Alamein/Belgrave/Lilydale) and Canterbury Station (Belgrave/Lilydale) bracket this cluster. Camberwell Junction is a major shopping and transport hub. Burke Road and Riversdale Road form key retail arteries. Tram 72 and 75 intersect at the junction.",
+      "alias": "IE6 – The Camberwell Junction",
+      "connects": [
+        "IE5",
+        "IE7",
+        "IE8"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE5",
+      "name": "The Ashburton-Camberwell Heights",
+      "suburbs": [
+        "Ashburton",
+        "Glen Iris",
+        "Camberwell"
+      ],
+      "corridors": "Camberwell Station (Alamein/Belgrave/Lilydale lines) provides major rail access. Ashburton Station (Alamein Line) serves the southern section. Tooronga Road and Burke Road are primary commercial corridors. Tram 72 terminates at Camberwell Junction.",
+      "alias": "IE5 – The Ashburton-Camberwell Heights",
+      "connects": [
+        "IE4",
+        "IE6",
+        "IE7"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE8",
+      "name": "Canterbury-Surrey Hills",
+      "suburbs": [
+        "Canterbury",
+        "Surrey Hills"
+      ],
+      "corridors": "Canterbury Station and Union Station (Belgrave/Lilydale lines) provide rail access. Union Road and Canterbury Road form the main corridors. Quiet residential area east of Camberwell.",
+      "alias": "IE8 – Canterbury-Surrey Hills",
+      "connects": [
+        "IE6",
+        "IE9"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE9",
+      "name": "The Balwyn Ridge",
+      "suburbs": [
+        "Deepdene",
+        "Balwyn",
+        "Balwyn North"
+      ],
+      "corridors": "No direct rail. Tram 48 (via Doncaster Road) serves North Balwyn terminus. Whitehorse Road, Balwyn Road, and Belmore Road form main local corridors. Bus routes connect to Box Hill Station and the city via Eastern Freeway.",
+      "alias": "IE9 – The Balwyn Ridge",
+      "connects": [
+        "IE8",
+        "IE10",
+        "IE11",
+        "NE1"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE11",
+      "name": "Kew East-Balwyn North",
+      "suburbs": [
+        "Kew East",
+        "Balwyn North"
+      ],
+      "corridors": "No direct rail. Tram 48 (Doncaster Road) provides main transit. Burke Road and Kilby Road form principal local arteries. Bus connections link to Kew Junction and Box Hill Station.",
+      "alias": "IE11 – Kew East-Balwyn North",
+      "connects": [
+        "IE9",
+        "IE10",
+        "NE1"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IE4",
+      "name": "The Malvern-Glen Iris Ridge",
+      "suburbs": [
+        "Malvern East",
+        "Malvern",
+        "Glen Iris"
+      ],
+      "corridors": "Malvern Station (Frankston Line) and Glen Iris Station (Glen Waverley Line) provide rail access. Tram 5 runs along Wattletree Road and Tram 6 along High Street. Wattletree Road is a key commercial strip.",
+      "alias": "IE4 – The Malvern-Glen Iris Ridge",
+      "connects": [
+        "IE3",
+        "IE5",
+        "IS4",
+        "SE2"
+      ],
+      "zone": "Inner East"
+    },
+    {
+      "cc": "IS2",
+      "name": "The South Yarra-Toorak Belt",
+      "suburbs": [
+        "South Yarra",
+        "Toorak",
+        "Kooyong"
+      ],
+      "corridors": "South Yarra Station serves the Frankston and Sandringham lines (Cranbourne/Pakenham now bypass via Metro Tunnel). Toorak Station (Frankston Line) and Kooyong Station (Glen Waverley Line) provide additional rail access. Toorak Road, Chapel Street, and Tram 58 form the commercial spine.",
+      "alias": "IS2 – The South Yarra-Toorak Belt",
+      "connects": [
+        "IE2",
+        "IS1",
+        "IS3",
+        "IS4"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "IS3",
+      "name": "The Chapel Street Spine",
+      "suburbs": [
+        "Windsor",
+        "Prahran",
+        "Armadale"
+      ],
+      "corridors": "Windsor and Prahran stations (Sandringham Line) and Armadale Station (Frankston Line) provide direct CBD connections. Chapel Street is the main commercial strip through Prahran and Windsor. High Street Armadale provides major retail. Tram 6 (High St) and Tram 78 (Chapel St) complement rail.",
+      "alias": "IS3 – The Chapel Street Spine",
+      "connects": [
+        "IS2",
+        "IS4",
+        "IS5",
+        "IS6",
+        "SE1"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "IS4",
+      "name": "The Kooyong-Malvern Corridor",
+      "suburbs": [
+        "Kooyong",
+        "Malvern",
+        "Armadale"
+      ],
+      "corridors": "Armadale Station and Malvern Station (Frankston Line) and Kooyong Station (Glen Waverley Line) form a triangle of rail access. Glenferrie Road and Wattletree Road are primary shopping strips. Tram 5 along Wattletree Road. Kooyong tennis precinct anchors the eastern edge.",
+      "alias": "IS4 – The Kooyong-Malvern Corridor",
+      "connects": [
+        "IS2",
+        "IS3",
+        "IE4",
+        "SE1",
+        "SE2"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "IS1",
+      "name": "Albert Park-Middle Park Bayside",
+      "suburbs": [
+        "Albert Park",
+        "Middle Park"
+      ],
+      "corridors": "Served by Tram 1 along the bay through South Melbourne Beach and Tram 96 heading to St Kilda. Beaconsfield Parade provides direct waterfront access. Albert Park Lake and Bridport Street shopping strip anchor the area. No direct rail — nearest South Yarra Station via connecting trams.",
+      "alias": "IS1 – Albert Park-Middle Park Bayside",
+      "connects": [
+        "IM3",
+        "IS2",
+        "IS5"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "IS5",
+      "name": "The St Kilda Foreshore",
+      "suburbs": [
+        "Middle Park",
+        "St Kilda West",
+        "St Kilda"
+      ],
+      "corridors": "Tram 96 connects St Kilda Beach to East Brunswick via the foreshore. Tram 3 provides cross-suburb connections to East Malvern. No direct rail — Balaclava and Windsor stations nearest. Fitzroy Street, Acland Street, and The Esplanade form the entertainment and shopping core. Luna Park.",
+      "alias": "IS5 – The St Kilda Foreshore",
+      "connects": [
+        "IS1",
+        "IS2",
+        "IS3",
+        "IS6"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "IS6",
+      "name": "Balaclava-Ripponlea",
+      "suburbs": [
+        "Balaclava",
+        "St Kilda East",
+        "Ripponlea"
+      ],
+      "corridors": "Balaclava Station and Ripponlea Station on the Sandringham Line provide direct CBD access. Carlisle Street in Balaclava is a major shopping and dining strip. Hotham Street and Glen Eira Road provide additional retail. Tram 3 and 67 nearby.",
+      "alias": "IS6 – Balaclava-Ripponlea",
+      "connects": [
+        "IS3",
+        "IS5",
+        "SE1",
+        "B3"
+      ],
+      "zone": "Inner South"
+    },
+    {
+      "cc": "NE2",
+      "name": "The Ivanhoe Ridge",
+      "suburbs": [
+        "Eaglemont",
+        "Ivanhoe",
+        "Ivanhoe East"
+      ],
+      "corridors": "Eaglemont and Ivanhoe stations (Hurstbridge Line) provide direct rail to the city. Upper Heidelberg Road and The Boulevard form main corridors. Yarra River frontage. Ivanhoe village shopping strip is a local retail anchor.",
+      "alias": "NE2 – The Ivanhoe Ridge",
+      "connects": [
+        "NE1",
+        "NE3",
+        "NE5"
+      ],
+      "zone": "North East"
+    },
+    {
+      "cc": "NE5",
+      "name": "The Fairfield-Alphington Bend",
+      "suburbs": [
+        "Fairfield",
+        "Alphington",
+        "Ivanhoe"
+      ],
+      "corridors": "Fairfield and Alphington stations (Hurstbridge Line) serve this riverside precinct. Station Street Fairfield and Heidelberg Road form main retail strips. Yarra River bend through Fairfield Boathouse area. Near Darebin Creek confluence.",
+      "alias": "NE5 – The Fairfield-Alphington Bend",
+      "connects": [
+        "IN3",
+        "NE2",
+        "NE3"
+      ],
+      "zone": "North East"
+    },
+    {
+      "cc": "NE3",
+      "name": "Heidelberg Hub",
+      "suburbs": [
+        "Heidelberg",
+        "Heidelberg Heights",
+        "Rosanna"
+      ],
+      "corridors": "Heidelberg and Rosanna stations (Hurstbridge Line) provide rail access. Burgundy Street is a major shopping strip. Austin Hospital and Heidelberg Repatriation Hospital form significant employment anchors. Banksia Street and Lower Plenty Road connect to broader corridors.",
+      "alias": "NE3 – Heidelberg Hub",
+      "connects": [
+        "NE1",
+        "NE2",
+        "NE4",
+        "NE5"
+      ],
+      "zone": "North East"
+    },
+    {
+      "cc": "NE4",
+      "name": "The Viewbank-Rosanna Basin",
+      "suburbs": [
+        "Viewbank",
+        "Rosanna",
+        "Heidelberg West"
+      ],
+      "corridors": "Rosanna Station (Hurstbridge Line) provides primary rail access. Rosanna Road is the main arterial. Yarra Valley parklands and heritage reserves. Olympic Village heritage precinct in Heidelberg West. Bus connections serve La Trobe University campus.",
+      "alias": "NE4 – The Viewbank-Rosanna Basin",
+      "connects": [
+        "IN4",
+        "NE2",
+        "NE3"
+      ],
+      "zone": "North East"
+    },
+    {
+      "cc": "NE1",
+      "name": "The Bulleen Valley",
+      "suburbs": [
+        "Bulleen",
+        "Balwyn North",
+        "Templestowe Lower"
+      ],
+      "corridors": "No direct rail. Manningham Road and Thompsons Road form main arteries. Eastern Freeway provides express east-west access. Bulleen Park & Ride serves commuter connections. Bus routes connect via Eastern Freeway corridor to Doncaster and the city.",
+      "alias": "NE1 – The Bulleen Valley",
+      "connects": [
+        "IE9",
+        "IE11",
+        "NE2",
+        "NE3"
+      ],
+      "zone": "North East"
+    },
+    {
+      "cc": "SE1",
+      "name": "The Caulfield Interchange",
+      "suburbs": [
+        "Caulfield North",
+        "Caulfield",
+        "Elsternwick"
+      ],
+      "corridors": "Caulfield Station is a major interchange serving Frankston, Cranbourne, and Pakenham lines. Elsternwick Station (Sandringham Line) provides secondary rail access. Monash University Caulfield campus. Glen Huntly Road and Normanby Road are primary retail streets. Tram 3, 64, and 67.",
+      "alias": "SE1 – The Caulfield Interchange",
+      "connects": [
+        "IS3",
+        "IS4",
+        "IS6",
+        "SE2",
+        "SE3",
+        "B3"
+      ],
+      "zone": "South East"
+    },
+    {
+      "cc": "SE2",
+      "name": "Caulfield East-Malvern East Ridge",
+      "suburbs": [
+        "Caulfield East",
+        "Caulfield",
+        "Malvern East"
+      ],
+      "corridors": "Caulfield Station (Frankston/Cranbourne/Pakenham lines) provides the primary rail hub. Dandenong Road and Waverley Road form main arteries. Monash Freeway provides rapid access to Clayton campus and outer suburbs. Bus connections to Monash University Clayton.",
+      "alias": "SE2 – Caulfield East-Malvern East Ridge",
+      "connects": [
+        "IS4",
+        "IE4",
+        "SE1",
+        "SE3"
+      ],
+      "zone": "South East"
+    },
+    {
+      "cc": "SE3",
+      "name": "Glen Huntly-Carnegie Corridor",
+      "suburbs": [
+        "Glen Huntly",
+        "Caulfield South",
+        "Carnegie"
+      ],
+      "corridors": "Glen Huntly Station (Frankston Line) and Carnegie Station (Pakenham/Cranbourne lines via Metro Tunnel) serve this corridor from two different rail lines. Glen Huntly Road is the primary shopping strip. Koornang Road Carnegie is a major food and multicultural dining precinct. Neerim Road provides secondary connectivity.",
+      "alias": "SE3 – Glen Huntly-Carnegie Corridor",
+      "connects": [
+        "SE1",
+        "SE2",
+        "SE4",
+        "B2"
+      ],
+      "zone": "South East"
+    },
+    {
+      "cc": "SE4",
+      "name": "The Carnegie-Murrumbeena Pocket",
+      "suburbs": [
+        "Carnegie",
+        "Murrumbeena",
+        "Hughesdale"
+      ],
+      "corridors": "Carnegie, Murrumbeena, and Hughesdale stations all serve the Cranbourne/Pakenham lines with elevated rail and level crossings removed. Koornang Road, Poath Road, and Neerim Road form a close-knit grid. Positioned on the Caulfield to Dandenong corridor.",
+      "alias": "SE4 – The Carnegie-Murrumbeena Pocket",
+      "connects": [
+        "SE3",
+        "SE5"
+      ],
+      "zone": "South East"
+    },
+    {
+      "cc": "SE5",
+      "name": "The Oakleigh Hub",
+      "suburbs": [
+        "Oakleigh East",
+        "Oakleigh",
+        "Huntingdale"
+      ],
+      "corridors": "Oakleigh and Huntingdale stations serve the Cranbourne/Pakenham lines. Eaton Mall Oakleigh is the major Greek precinct and dining strip. Warrigal Road and Dandenong Road provide through-routes. Bus from Huntingdale Station to Monash University Clayton campus.",
+      "alias": "SE5 – The Oakleigh Hub",
+      "connects": [
+        "SE3",
+        "SE4"
+      ],
+      "zone": "South East"
+    },
+    {
+      "cc": "IW2",
+      "name": "The Footscray Hub",
+      "suburbs": [
+        "Footscray",
+        "Seddon",
+        "West Footscray"
+      ],
+      "corridors": "Footscray Station is a major interchange serving the Sunbury Line (via Metro Tunnel), Werribee, and Williamstown lines. Seddon Station (Werribee/Williamstown lines). Leeds Street, Barkly Street, and Nicholson Street form the commercial core. Footscray Market and Hopkins Street dining precinct.",
+      "alias": "IW2 – The Footscray Hub",
+      "connects": [
+        "IM6",
+        "IW1",
+        "IW3",
+        "W2",
+        "W3"
+      ],
+      "zone": "Inner West"
+    },
+    {
+      "cc": "IW1",
+      "name": "The Maribyrnong Bend",
+      "suburbs": [
+        "Maribyrnong",
+        "Ascot Vale",
+        "Maidstone"
+      ],
+      "corridors": "Tram 57 connects Maribyrnong to Flinders Street Station. Tram 82 extends through Moonee Ponds to Footscray. Ascot Vale Station (Craigieburn Line) is nearest rail. Highpoint Shopping Centre is the major retail anchor. Raleigh Road and Maribyrnong Road provide local connectivity.",
+      "alias": "IW1 – The Maribyrnong Bend",
+      "connects": [
+        "IW2",
+        "NW1",
+        "NW2",
+        "NW4",
+        "W3"
+      ],
+      "zone": "Inner West"
+    },
+    {
+      "cc": "IW3",
+      "name": "Yarraville-Kingsville Village",
+      "suburbs": [
+        "Yarraville",
+        "Seddon",
+        "Kingsville"
+      ],
+      "corridors": "Yarraville and Seddon stations (Werribee/Williamstown lines) provide regular CBD services. Anderson Street Yarraville is a charming village high street. Somerville Road and Williamstown Road provide residential connectivity. Quiet village character with low-rise development.",
+      "alias": "IW3 – Yarraville-Kingsville Village",
+      "connects": [
+        "IW2",
+        "IW4"
+      ],
+      "zone": "Inner West"
+    },
+    {
+      "cc": "IW4",
+      "name": "Spotswood-Newport Gateway",
+      "suburbs": [
+        "Spotswood",
+        "South Kingsville",
+        "Newport"
+      ],
+      "corridors": "Spotswood and Newport stations serve the Werribee/Williamstown lines, with Newport as a junction station. Melbourne Road and Hudsons Road are primary corridors. The Strand Newport for waterfront dining. Scienceworks museum.",
+      "alias": "IW4 – Spotswood-Newport Gateway",
+      "connects": [
+        "IW3",
+        "IW5",
+        "W1"
+      ],
+      "zone": "Inner West"
+    },
+    {
+      "cc": "IW5",
+      "name": "The Williamstown Peninsula",
+      "suburbs": [
+        "Newport",
+        "Williamstown",
+        "Williamstown North"
+      ],
+      "corridors": "Newport, Williamstown, and Williamstown North stations all serve the Williamstown Line with direct CBD connections. Nelson Place waterfront dining strip. Ferguson Street historic main street. Williamstown Beach. Ferry from Gem Pier to the CBD.",
+      "alias": "IW5 – The Williamstown Peninsula",
+      "connects": [
+        "IW4",
+        "W1"
+      ],
+      "zone": "Inner West"
+    },
+    {
+      "cc": "W1",
+      "name": "The Altona Coastal Strip",
+      "suburbs": [
+        "Seaholme",
+        "Altona",
+        "Altona North"
+      ],
+      "corridors": "Seaholme and Altona stations serve the Werribee Line with regular CBD services. Pier Street Altona. Millers Road and Kororoit Creek Road. Cherry Lake and Altona Beach foreshore provide major recreational amenity.",
+      "alias": "W1 – The Altona Coastal Strip",
+      "connects": [
+        "IW4",
+        "IW5",
+        "W2"
+      ],
+      "zone": "Western Suburbs"
+    },
+    {
+      "cc": "W2",
+      "name": "The Brooklyn-Tottenham Industrial Belt",
+      "suburbs": [
+        "Brooklyn",
+        "Tottenham",
+        "West Footscray"
+      ],
+      "corridors": "Tottenham Station and West Footscray Station (Sunbury Line via Metro Tunnel). Geelong Road and Sunshine Road are major through-routes. Near Western Ring Road access. Mixed industrial and residential character.",
+      "alias": "W2 – The Brooklyn-Tottenham Industrial Belt",
+      "connects": [
+        "IW2",
+        "W1",
+        "W3"
+      ],
+      "zone": "Western Suburbs"
+    },
+    {
+      "cc": "W3",
+      "name": "The Sunshine Hub",
+      "suburbs": [
+        "Braybrook",
+        "Sunshine",
+        "Maidstone"
+      ],
+      "corridors": "Sunshine Station is a major interchange on the Sunbury Line (via Metro Tunnel) with V/Line connections to Bendigo and Ballarat. Ballarat Road and Hampshire Road form the primary shopping and commercial spine. Braybrook extends as a residential hinterland along Ballarat Road.",
+      "alias": "W3 – The Sunshine Hub",
+      "connects": [
+        "IW1",
+        "IW2",
+        "W2",
+        "W4"
+      ],
+      "zone": "Western Suburbs"
+    },
+    {
+      "cc": "W4",
+      "name": "Avondale-Keilor East Heights",
+      "suburbs": [
+        "Avondale Heights",
+        "Keilor East",
+        "Maribyrnong"
+      ],
+      "corridors": "No direct rail. Bus routes along Keilor Road connect to Essendon Station (Craigieburn Line) and Watergardens Station (Sunbury Line). Military Road and Buckley Street are primary local routes. Calder Freeway and Western Ring Road access. Residential area with larger blocks.",
+      "alias": "W4 – Avondale-Keilor East Heights",
+      "connects": [
+        "IW1",
+        "W3",
+        "NW5"
+      ],
+      "zone": "Western Suburbs"
+    },
+    {
+      "cc": "NW1",
+      "name": "Flemington-Ascot Vale Corridor",
+      "suburbs": [
+        "Travancore",
+        "Flemington",
+        "Ascot Vale"
+      ],
+      "corridors": "Flemington Bridge Station (Upfield Line) and Ascot Vale Station (Craigieburn Line) provide dual rail corridors. Mount Alexander Road and Epsom Road are primary streets. Flemington Racecourse. Tram 57 and 59 extend connectivity.",
+      "alias": "NW1 – Flemington-Ascot Vale Corridor",
+      "connects": [
+        "IM2",
+        "IN6",
+        "IW1",
+        "NW2"
+      ],
+      "zone": "Northwest"
+    },
+    {
+      "cc": "NW2",
+      "name": "Moonee Ponds-Strathmore",
+      "suburbs": [
+        "Pascoe Vale South",
+        "Moonee Ponds",
+        "Strathmore"
+      ],
+      "corridors": "Moonee Ponds and Strathmore stations serve the Craigieburn Line. Puckle Street Moonee Ponds is a major shopping strip. Tram 82 extends toward Footscray. Pascoe Vale Road and Mount Alexander Road provide connectivity.",
+      "alias": "NW2 – Moonee Ponds-Strathmore",
+      "connects": [
+        "IW1",
+        "NW1",
+        "NW3",
+        "NW4"
+      ],
+      "zone": "Northwest"
+    },
+    {
+      "cc": "NW3",
+      "name": "The Essendon Corridor",
+      "suburbs": [
+        "Essendon North",
+        "Essendon",
+        "Strathmore"
+      ],
+      "corridors": "Essendon and Strathmore stations serve the Craigieburn Line with direct CBD access. Rose Street Essendon is a village high street. Keilor Road and Buckley Street are primary corridors. Near Tullamarine Freeway for airport access.",
+      "alias": "NW3 – The Essendon Corridor",
+      "connects": [
+        "NW2",
+        "NW4",
+        "NW5"
+      ],
+      "zone": "Northwest"
+    },
+    {
+      "cc": "NW4",
+      "name": "Aberfeldie-Essendon West",
+      "suburbs": [
+        "Aberfeldie",
+        "Essendon",
+        "Moonee Ponds"
+      ],
+      "corridors": "Near Essendon and Moonee Ponds stations (Craigieburn Line). Buckley Street and Maribyrnong Road form main corridors. Maribyrnong River corridor provides open space. Predominantly family-oriented residential area.",
+      "alias": "NW4 – Aberfeldie-Essendon West",
+      "connects": [
+        "IW1",
+        "NW2",
+        "NW3",
+        "NW5"
+      ],
+      "zone": "Northwest"
+    },
+    {
+      "cc": "NW5",
+      "name": "Niddrie-Keilor East",
+      "suburbs": [
+        "Niddrie",
+        "Keilor East",
+        "Essendon West"
+      ],
+      "corridors": "No direct rail. Bus routes along Keilor Road connect to Essendon Station (Craigieburn) and Watergardens Station (Sunbury). Keilor Road and Milleara Road are primary routes. Niddrie shopping strip. Tullamarine Freeway access.",
+      "alias": "NW5 – Niddrie-Keilor East",
+      "connects": [
+        "W4",
+        "NW3",
+        "NW4"
+      ],
+      "zone": "Northwest"
+    },
+    {
+      "cc": "B1",
+      "name": "The Brighton Foreshore",
+      "suburbs": [
+        "Brighton",
+        "Brighton East",
+        "Hampton"
+      ],
+      "corridors": "Brighton Beach and Hampton stations serve the Sandringham Line with direct CBD and bayside connections. Church Street Brighton is a village shopping precinct. Hampton Street and Bay Street connect to Port Phillip Bay foreshore and iconic beach boxes.",
+      "alias": "B1 – The Brighton Foreshore",
+      "connects": [
+        "B2",
+        "B3",
+        "SE1"
+      ],
+      "zone": "Bayside"
+    },
+    {
+      "cc": "B2",
+      "name": "Bentleigh-McKinnon Corridor",
+      "suburbs": [
+        "Bentleigh",
+        "Bentleigh East",
+        "McKinnon"
+      ],
+      "corridors": "Bentleigh and McKinnon stations serve the Frankston Line with elevated rail and removed level crossings. Centre Road Bentleigh is the major shopping strip. East Boundary Road and Jasper Road provide secondary connectivity.",
+      "alias": "B2 – Bentleigh-McKinnon Corridor",
+      "connects": [
+        "B1",
+        "B3",
+        "SE1",
+        "SE3"
+      ],
+      "zone": "Bayside"
+    },
+    {
+      "cc": "B3",
+      "name": "Gardenvale-Elsternwick",
+      "suburbs": [
+        "Gardenvale",
+        "Elsternwick",
+        "Brighton"
+      ],
+      "corridors": "Gardenvale and Elsternwick stations serve the Sandringham Line. Glen Huntly Road extends through Elsternwick as a village high street. Nepean Highway provides through-traffic. Near Caulfield Racecourse.",
+      "alias": "B3 – Gardenvale-Elsternwick",
+      "connects": [
+        "IS6",
+        "B1",
+        "B2",
+        "SE1"
+      ],
+      "zone": "Bayside"
+    },
+    {
+      "cc": "MP1",
+      "name": "Portsea & Sorrento",
+      "suburbs": [
+        "Portsea",
+        "Sorrento",
+        "Blairgowrie"
+      ],
+      "corridors": "Bus route 788 (Frankston–Portsea via Dromana & Rosebud) serves this coastal strip. Point Nepean Road is the primary route. Mornington Peninsula National Park and historic Sorrento village provide key landmarks.",
+      "alias": "MP1 – Portsea & Sorrento",
+      "connects": [
+        "MP2",
+        "MP4"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP2",
+      "name": "Rye & St Andrews Beach",
+      "suburbs": [
+        "Rye",
+        "Tootgarook",
+        "St Andrews Beach"
+      ],
+      "corridors": "Bus route 788 (Frankston–Portsea) passes through Rye with stops at Rye Shopping Centre. Point Nepean Road provides the main coastal corridor. Noted for surf beaches including Gunnamatta and St Andrews Beach.",
+      "alias": "MP2 – Rye & St Andrews Beach",
+      "connects": [
+        "MP1",
+        "MP3",
+        "MP4"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP3",
+      "name": "Cape Schanck",
+      "suburbs": [
+        "Fingal",
+        "St Andrews Beach",
+        "Cape Schanck"
+      ],
+      "corridors": "Limited direct bus service; accessible via Point Nepean Road from Rye and Portsea. Cape Schanck is part of Mornington Peninsula National Park with walking tracks to Fingal Beach and Cape Schanck Boardwalk.",
+      "alias": "MP3 – Cape Schanck",
+      "connects": [
+        "MP1",
+        "MP2"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP4",
+      "name": "Rosebud & Capel Sound",
+      "suburbs": [
+        "Capel Sound",
+        "Rosebud",
+        "Tootgarook"
+      ],
+      "corridors": "Bus route 788 (Frankston–Portsea) serves Rosebud with multiple stops. Point Nepean Road and Nepean Highway provide key road access. Rosebud is a major regional hub with shopping and aquatic facilities.",
+      "alias": "MP4 – Rosebud & Capel Sound",
+      "connects": [
+        "MP1",
+        "MP2",
+        "MP5",
+        "MP6",
+        "MP8"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP5",
+      "name": "Main Ridge & Boneo",
+      "suburbs": [
+        "Boneo",
+        "Rosebud",
+        "Capel Sound",
+        "Main Ridge"
+      ],
+      "corridors": "Bus route 788 connects Rosebud; Main Ridge is primarily car-accessed via local roads. Known as wine country with scenic hinterland roads and the Red Hill Market.",
+      "alias": "MP5 – Main Ridge & Boneo",
+      "connects": [
+        "MP4",
+        "MP6",
+        "MP7",
+        "MP9"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP6",
+      "name": "Dromana & Arthurs Seat",
+      "suburbs": [
+        "McCrae",
+        "Dromana",
+        "Arthurs Seat"
+      ],
+      "corridors": "Bus routes 788 (Frankston–Portsea) and 781 (Frankston–Dromana via Mount Eliza & Mornington) serve Dromana. Nepean Highway and Point Nepean Road are main routes. Arthurs Seat provides elevated views over Port Phillip Bay.",
+      "alias": "MP6 – Dromana & Arthurs Seat",
+      "connects": [
+        "MP4",
+        "MP5",
+        "MP8"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP7",
+      "name": "Red Hill",
+      "suburbs": [
+        "Red Hill",
+        "Main Ridge",
+        "Red Hill South"
+      ],
+      "corridors": "Limited direct bus service; primarily car-accessed from Mornington or Rosebud. Red Hill is renowned for wineries, galleries, and the Red Hill Market. Sandy Bay Road and local roads provide key access.",
+      "alias": "MP7 – Red Hill",
+      "connects": [
+        "MP5",
+        "MP9",
+        "MP10",
+        "MP11"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP8",
+      "name": "Mount Martha & Safety Beach",
+      "suburbs": [
+        "Safety Beach",
+        "Dromana",
+        "Mount Martha"
+      ],
+      "corridors": "Bus routes 781 (Frankston–Dromana via Mount Eliza & Mornington) and 788 serve this corridor. Nepean Highway and Point Nepean Road provide main access. Mount Martha village shopping and beach amenities.",
+      "alias": "MP8 – Mount Martha & Safety Beach",
+      "connects": [
+        "MP4",
+        "MP6",
+        "MP11"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP9",
+      "name": "Merricks North",
+      "suburbs": [
+        "Merricks North",
+        "Red Hill"
+      ],
+      "corridors": "Limited public transport; car-accessed via local roads from Red Hill and Merricks. Noted for rural and wine country character with access to hinterland roads.",
+      "alias": "MP9 – Merricks North",
+      "connects": [
+        "MP5",
+        "MP7",
+        "MP10"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP10",
+      "name": "Moorooduc & Bittern",
+      "suburbs": [
+        "Tuerong",
+        "Moorooduc",
+        "Bittern"
+      ],
+      "corridors": "Moorooduc Highway provides the main east-west corridor linking to Frankston. Limited bus service; primarily car-accessed. Frankston-Flinders Road provides secondary connectivity.",
+      "alias": "MP10 – Moorooduc & Bittern",
+      "connects": [
+        "MP7",
+        "MP9",
+        "MP11"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "MP11",
+      "name": "Mornington & Mount Eliza",
+      "suburbs": [
+        "Mornington",
+        "Mount Eliza",
+        "Moorooduc"
+      ],
+      "corridors": "Bus routes 781 and 785 (Frankston–Mornington/Mount Eliza) and route 788 serve this hub. Mornington Peninsula Freeway (M11) provides major access north. Main Street Mornington features over 370 retail outlets.",
+      "alias": "MP11 – Mornington & Mount Eliza",
+      "connects": [
+        "MP6",
+        "MP7",
+        "MP8",
+        "MP10",
+        "FK1"
+      ],
+      "zone": "Mornington Peninsula"
+    },
+    {
+      "cc": "FK1",
+      "name": "Frankston Gateway",
+      "suburbs": [
+        "Frankston South",
+        "Frankston",
+        "Mount Eliza",
+        "Langwarrin"
+      ],
+      "corridors": "Frankston Station (Frankston Line via City Loop) is the major interchange hub. Key roads include Frankston Freeway (M3), Nepean Highway, and Cranbourne Road. Bus routes 781, 784, 785, 791 connect to Langwarrin Plaza and Mount Eliza village.",
+      "alias": "FK1 – Frankston Gateway",
+      "connects": [
+        "FK2",
+        "FK5",
+        "FK9",
+        "MP11"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK2",
+      "name": "Baxter-Langwarrin South",
+      "suburbs": [
+        "Baxter",
+        "Langwarrin South",
+        "Pearcedale",
+        "Somerville"
+      ],
+      "corridors": "Bus routes 788, 791 via Cranbourne Road and Nepean Highway connect to Frankston Station. Limited direct rail; primarily bus-dependent area. Langwarrin Plaza accessible via Route 791.",
+      "alias": "FK2 – Baxter-Langwarrin South",
+      "connects": [
+        "FK1",
+        "FK3"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK3",
+      "name": "Cranbourne South Growth",
+      "suburbs": [
+        "Cranbourne South",
+        "Botanic Ridge",
+        "Langwarrin",
+        "Pearcedale"
+      ],
+      "corridors": "South Gippsland Highway and Dandenong-Hastings Road corridor. Bus routes via Cranbourne Road connect to Cranbourne Station. Growing residential area with emerging retail precincts.",
+      "alias": "FK3 – Cranbourne South Growth",
+      "connects": [
+        "FK2",
+        "FK4",
+        "FK6"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK4",
+      "name": "Devon Meadows Junction",
+      "suburbs": [
+        "Devon Meadows",
+        "Junction Village",
+        "Cranbourne South"
+      ],
+      "corridors": "South Gippsland Highway and Dandenong-Hastings Road provide major arterial access. Junction Village retail area on South Gippsland Highway corridor. Growing residential area with road-based transport focus.",
+      "alias": "FK4 – Devon Meadows Junction",
+      "connects": [
+        "FK3",
+        "FK6"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK5",
+      "name": "Frankston North-Seaford",
+      "suburbs": [
+        "Frankston North",
+        "Seaford",
+        "Carrum Downs",
+        "Skye"
+      ],
+      "corridors": "Seaford Station (Frankston Line via City Loop) provides direct CBD connection. EastLink toll access at Carrum Downs interchange. Bus routes 760, 780, 901 provide orbital connections via Ballarto Road and Hall Road.",
+      "alias": "FK5 – Frankston North-Seaford",
+      "connects": [
+        "FK1",
+        "FK6",
+        "FK9"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK6",
+      "name": "Cranbourne Hub",
+      "suburbs": [
+        "Cranbourne West",
+        "Cranbourne",
+        "Sandhurst",
+        "Skye"
+      ],
+      "corridors": "Cranbourne Station (Cranbourne Line via Metro Tunnel) provides direct CBD access. South Gippsland Highway corridor. Bus routes 893, 894, 895. Cranbourne Park shopping precinct is the major retail anchor.",
+      "alias": "FK6 – Cranbourne Hub",
+      "connects": [
+        "FK3",
+        "FK4",
+        "FK5",
+        "FK7"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK7",
+      "name": "Cranbourne North",
+      "suburbs": [
+        "Cranbourne North",
+        "Narre Warren South",
+        "Clyde North"
+      ],
+      "corridors": "Bus routes 828, 841, 893, 895 connect to Cranbourne and Narre Warren stations. South Gippsland Highway and Western Port Highway provide major road access. Growing residential corridor with improving transit.",
+      "alias": "FK7 – Cranbourne North",
+      "connects": [
+        "FK6",
+        "FK8",
+        "FK12"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK8",
+      "name": "Lynbrook-Hampton Park",
+      "suburbs": [
+        "Lynbrook",
+        "Lyndhurst",
+        "Hampton Park"
+      ],
+      "corridors": "Lynbrook Station (Cranbourne Line via Metro Tunnel) and Hallam Station (Pakenham Line) provide rail access. South Gippsland Highway and Western Port Highway convergence. Elevated level-crossing-free rail.",
+      "alias": "FK8 – Lynbrook-Hampton Park",
+      "connects": [
+        "FK7",
+        "FK12",
+        "FK13",
+        "MS1"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK9",
+      "name": "Carrum Coastal",
+      "suburbs": [
+        "Carrum",
+        "Patterson Lakes",
+        "Bonbeach",
+        "Seaford"
+      ],
+      "corridors": "Carrum, Bonbeach, and Seaford stations (Frankston Line via City Loop) provide beachside rail access. Nepean Highway and coastal connections. Patterson Lakes Lakeview Shopping Centre.",
+      "alias": "FK9 – Carrum Coastal",
+      "connects": [
+        "FK1",
+        "FK5",
+        "FK11",
+        "MS2"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK10",
+      "name": "Bangholme-Dandenong South",
+      "suburbs": [
+        "Bangholme",
+        "Patterson Lakes",
+        "Dandenong South",
+        "Lyndhurst"
+      ],
+      "corridors": "EastLink corridor and Dandenong-Hastings Road provide road access. Mixed industrial-residential character. Bus routes 857, 890, 893 connect to Dandenong precinct.",
+      "alias": "FK10 – Bangholme-Dandenong South",
+      "connects": [
+        "FK9",
+        "FK13"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK11",
+      "name": "Chelsea Bayside",
+      "suburbs": [
+        "Chelsea",
+        "Edithvale",
+        "Bonbeach",
+        "Chelsea Heights"
+      ],
+      "corridors": "Chelsea, Edithvale, and Bonbeach stations (Frankston Line via City Loop) rebuilt in 2021 with modern interchanges. Nepean Highway and Wells Road provide arterial access. Strong bayside character.",
+      "alias": "FK11 – Chelsea Bayside",
+      "connects": [
+        "FK9",
+        "MS2",
+        "MS3"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK12",
+      "name": "Narre Warren Central",
+      "suburbs": [
+        "Narre Warren",
+        "Narre Warren South",
+        "Berwick",
+        "Hallam"
+      ],
+      "corridors": "Narre Warren, Hallam, and Berwick stations (Cranbourne/Pakenham Lines via Metro Tunnel) with elevated rail. South Gippsland Highway corridor. Fountain Gate Shopping Centre is the major regional retail anchor.",
+      "alias": "FK12 – Narre Warren Central",
+      "connects": [
+        "FK7",
+        "FK8",
+        "FK13"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "FK13",
+      "name": "Dandenong Hub",
+      "suburbs": [
+        "Eumemmerring",
+        "Doveton",
+        "Dandenong",
+        "Dandenong South"
+      ],
+      "corridors": "Dandenong Station is a junction where Cranbourne and Pakenham Lines split (via Metro Tunnel). Dandenong-Hastings Road and South Gippsland Highway corridors. Major regional employment hub with EastLink access.",
+      "alias": "FK13 – Dandenong Hub",
+      "connects": [
+        "FK8",
+        "FK10",
+        "FK12",
+        "MS1"
+      ],
+      "zone": "Frankston & SE Growth"
+    },
+    {
+      "cc": "MS1",
+      "name": "Keysborough-Noble Park",
+      "suburbs": [
+        "Keysborough",
+        "Noble Park"
+      ],
+      "corridors": "Noble Park Station (Cranbourne/Pakenham via Metro Tunnel) provides direct CBD access. Centre Dandenong Road and Springvale Road are primary arteries. Parkmore Shopping Centre is the major retail anchor.",
+      "alias": "MS1 – Keysborough-Noble Park",
+      "connects": [
+        "FK8",
+        "FK13",
+        "MS4",
+        "MS5"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS4",
+      "name": "Dingley Village-Springvale",
+      "suburbs": [
+        "Dingley Village",
+        "Heatherton",
+        "Springvale South",
+        "Springvale"
+      ],
+      "corridors": "Springvale Station (Cranbourne/Pakenham via Metro Tunnel) serves the eastern edge. Springvale Road and Centre Dandenong Road form the main commercial corridors. Sandown Park racecourse nearby.",
+      "alias": "MS4 – Dingley Village-Springvale",
+      "connects": [
+        "MS1",
+        "MS2",
+        "MS5",
+        "MS6"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS5",
+      "name": "Noble Park North-Mulgrave",
+      "suburbs": [
+        "Noble Park North",
+        "Springvale",
+        "Mulgrave"
+      ],
+      "corridors": "Springvale Station (Cranbourne/Pakenham via Metro Tunnel) provides rail access. Springvale Road and Wellington Road are key arteries. Monash University Clayton campus is nearby with bus connections.",
+      "alias": "MS5 – Noble Park North-Mulgrave",
+      "connects": [
+        "MS1",
+        "MS4",
+        "MS6",
+        "MS10"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS6",
+      "name": "Clayton-Clarinda",
+      "suburbs": [
+        "Clayton South",
+        "Clayton",
+        "Clarinda",
+        "Heatherton"
+      ],
+      "corridors": "Clayton Station (Cranbourne/Pakenham via Metro Tunnel) is the primary rail access. Clayton Road and Centre Road form commercial corridors. Monash Medical Centre is a major employment anchor.",
+      "alias": "MS6 – Clayton-Clarinda",
+      "connects": [
+        "MS4",
+        "MS5",
+        "MS7",
+        "MS10"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS2",
+      "name": "Aspendale-Mordialloc",
+      "suburbs": [
+        "Aspendale",
+        "Aspendale Gardens",
+        "Braeside",
+        "Mordialloc"
+      ],
+      "corridors": "Aspendale and Mordialloc stations (Frankston Line via City Loop) provide direct CBD rail access. Nepean Highway and Wells Road are primary arteries. Mordialloc village and beachfront provide local retail and recreation.",
+      "alias": "MS2 – Aspendale-Mordialloc",
+      "connects": [
+        "FK11",
+        "MS3",
+        "MS4",
+        "MS8"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS3",
+      "name": "Parkdale-Mentone",
+      "suburbs": [
+        "Parkdale",
+        "Mentone",
+        "Mordialloc"
+      ],
+      "corridors": "Parkdale, Mentone, and Mordialloc stations (Frankston Line via City Loop) provide strong rail connectivity. Nepean Highway and Warrigal Road are primary corridors. Mentone Shopping Centre and village strip anchor the precinct.",
+      "alias": "MS3 – Parkdale-Mentone",
+      "connects": [
+        "MS2",
+        "MS7",
+        "MS8",
+        "FK9"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS7",
+      "name": "Moorabbin-Hampton East",
+      "suburbs": [
+        "Moorabbin",
+        "Bentleigh",
+        "Highett",
+        "Hampton East"
+      ],
+      "corridors": "Moorabbin and Highett stations (Frankston Line via City Loop) provide rail access. Nepean Highway and Warrigal Road are primary arteries. Moorabbin shopping strip and Centre Road Bentleigh provide retail.",
+      "alias": "MS7 – Moorabbin-Hampton East",
+      "connects": [
+        "B2",
+        "MS3",
+        "MS6",
+        "MS8"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS8",
+      "name": "Cheltenham-Beaumaris",
+      "suburbs": [
+        "Cheltenham",
+        "Highett",
+        "Moorabbin",
+        "Beaumaris"
+      ],
+      "corridors": "Cheltenham Station (Frankston Line via City Loop) provides rail access. Nepean Highway and Bay Road are primary arteries. Southland Shopping Centre nearby is the major regional retail hub.",
+      "alias": "MS8 – Cheltenham-Beaumaris",
+      "connects": [
+        "MS3",
+        "MS7",
+        "MS9",
+        "MS2"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS9",
+      "name": "Black Rock-Sandringham",
+      "suburbs": [
+        "Black Rock",
+        "Beaumaris",
+        "Sandringham"
+      ],
+      "corridors": "Sandringham Station (Sandringham Line terminus) provides direct CBD rail access. Beach Road and Bay Road are primary routes. Sandringham Village shopping precinct and foreshore beaches.",
+      "alias": "MS9 – Black Rock-Sandringham",
+      "connects": [
+        "B1",
+        "MS8"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "MS10",
+      "name": "Oakleigh South-Clarinda",
+      "suburbs": [
+        "Oakleigh South",
+        "Oakleigh",
+        "Huntingdale",
+        "Clarinda"
+      ],
+      "corridors": "Oakleigh and Huntingdale stations (Cranbourne/Pakenham via Metro Tunnel) provide rail access. Warrigal Road and Dandenong Road are key corridors. Eaton Mall Oakleigh is the major Greek precinct dining strip.",
+      "alias": "MS10 – Oakleigh South-Clarinda",
+      "connects": [
+        "SE5",
+        "MS5",
+        "MS6"
+      ],
+      "zone": "Middle South East"
+    },
+    {
+      "cc": "G1",
+      "name": "Geelong CBD",
+      "suburbs": [
+        "Geelong CBD",
+        "Geelong West"
+      ],
+      "corridors": "V/Line Geelong Station connects direct to Melbourne via the Geelong Line. Moorabool Street, Malop Street, and Ryrie Street form the main retail and commercial precinct. CDC Victoria bus network services the CBD with frequent local routes.",
+      "alias": "G1 – Geelong CBD",
+      "connects": [
+        "G2",
+        "G7",
+        "G8"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G2",
+      "name": "Geelong West",
+      "suburbs": [
+        "Geelong West",
+        "Manifold Heights"
+      ],
+      "corridors": "Walking distance to V/Line Geelong Station and CBD via Latrobe Terrace. Pakington Street is the main retail strip with boutique shops and cafes. CDC Victoria buses service the precinct.",
+      "alias": "G2 – Geelong West",
+      "connects": [
+        "G1",
+        "G3",
+        "G6"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G7",
+      "name": "South Geelong",
+      "suburbs": [
+        "Thomson",
+        "East Geelong",
+        "Newcomb",
+        "South Geelong"
+      ],
+      "corridors": "V/Line South Geelong Station provides direct train access to Melbourne. CDC Victoria buses connect the station precinct. Midland Highway and Geelong Ring Road provide road access. Gateway to eastern Geelong suburbs.",
+      "alias": "G7 – South Geelong",
+      "connects": [
+        "G1",
+        "G6",
+        "G13"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G3",
+      "name": "Manifold Heights",
+      "suburbs": [
+        "Manifold Heights",
+        "Herne Hills",
+        "Fyansford"
+      ],
+      "corridors": "CDC Victoria bus routes provide local connections. Midland Highway provides road connectivity to Geelong CBD. Access to Geelong Ring Road for broader regional travel.",
+      "alias": "G3 – Manifold Heights",
+      "connects": [
+        "G2",
+        "G4",
+        "G5"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G4",
+      "name": "Herne Hills",
+      "suburbs": [
+        "Herne Hills",
+        "Hamlyn Heights"
+      ],
+      "corridors": "CDC Victoria bus network connects to surrounding districts. Geelong Ring Road and local roads provide transport access. Mixed residential precinct with local shopping strips.",
+      "alias": "G4 – Herne Hills",
+      "connects": [
+        "G3",
+        "G5",
+        "G9"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G5",
+      "name": "Belmont & Highton",
+      "suburbs": [
+        "Belmont",
+        "Highton",
+        "Newtown"
+      ],
+      "corridors": "CDC Victoria buses service this major residential precinct. Located on the south-western side of Geelong with access to Geelong Ring Road. Highton is a growing commercial centre with retail precincts. Surf Coast Highway provides access to the coast.",
+      "alias": "G5 – Belmont & Highton",
+      "connects": [
+        "G3",
+        "G4",
+        "G6",
+        "G13"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G6",
+      "name": "Wandana Heights",
+      "suburbs": [
+        "Highton",
+        "Wandana Heights"
+      ],
+      "corridors": "CDC Victoria bus routes service the residential precinct. Geelong Ring Road provides major road connectivity. Elevated position with views over Geelong and the bay.",
+      "alias": "G6 – Wandana Heights",
+      "connects": [
+        "G2",
+        "G5",
+        "G7"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G8",
+      "name": "North Geelong",
+      "suburbs": [
+        "North Geelong",
+        "Drumcondra",
+        "Rippleside"
+      ],
+      "corridors": "V/Line North Geelong Station on the Geelong Line provides commuter rail access. CDC Victoria buses service the district. Waterfront precinct with Rippleside Park providing bay views.",
+      "alias": "G8 – North Geelong",
+      "connects": [
+        "G1",
+        "G9",
+        "G11"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G9",
+      "name": "Bell Park & Hamlyn Heights",
+      "suburbs": [
+        "Bell Park",
+        "North Geelong",
+        "Hamlyn Heights"
+      ],
+      "corridors": "CDC Victoria bus network connects to North Geelong Station precinct. Local shopping and community facilities along Separation Street. Access to Geelong Ring Road.",
+      "alias": "G9 – Bell Park & Hamlyn Heights",
+      "connects": [
+        "G4",
+        "G8",
+        "G10"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G10",
+      "name": "Bell Post Hill",
+      "suburbs": [
+        "Bell Post Hill",
+        "Bell Park",
+        "Norlane"
+      ],
+      "corridors": "CDC Victoria buses service the growing precinct. Located on the Geelong Ring Road corridor. Local retail and community amenities along Bacchus Marsh Road.",
+      "alias": "G10 – Bell Post Hill",
+      "connects": [
+        "G9",
+        "G11",
+        "G12"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G11",
+      "name": "Norlane & North Shore",
+      "suburbs": [
+        "Norlane",
+        "North Shore"
+      ],
+      "corridors": "V/Line North Shore Station on the Geelong Line provides commuter rail access to Melbourne. CDC Victoria buses service the station precinct. Industrial and mixed-use zone with Geelong Ring Road access.",
+      "alias": "G11 – Norlane & North Shore",
+      "connects": [
+        "G8",
+        "G10",
+        "G12"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G12",
+      "name": "Corio",
+      "suburbs": [
+        "North Shore",
+        "Corio"
+      ],
+      "corridors": "V/Line Corio Station on the Geelong Line provides commuter rail access to Melbourne. CDC Victoria bus network connects the station. Industrial and residential precinct with Geelong Ring Road connectivity.",
+      "alias": "G12 – Corio",
+      "connects": [
+        "G10",
+        "G11",
+        "G13"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G13",
+      "name": "Leopold-Newcomb",
+      "suburbs": [
+        "Leopold",
+        "Moolap",
+        "Newcomb",
+        "Whittington"
+      ],
+      "corridors": "CDC Victoria buses service the eastern suburbs connecting to Geelong CBD. Bellarine Highway provides road access to the Bellarine Peninsula. Mixed residential with local shopping strips along Bellarine Highway.",
+      "alias": "G13 – Leopold-Newcomb",
+      "connects": [
+        "G5",
+        "G7",
+        "G12",
+        "G14",
+        "G16"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G14",
+      "name": "Breakwater & St Albans Park",
+      "suburbs": [
+        "St Albans Park",
+        "Whittington",
+        "Breakwater",
+        "Moolap"
+      ],
+      "corridors": "CDC Victoria buses service the precinct. Geelong Ring Road and local roads provide connectivity. Breakwater is a residential and recreational destination with foreshore access.",
+      "alias": "G14 – Breakwater & St Albans Park",
+      "connects": [
+        "G13",
+        "G16",
+        "G20"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G15",
+      "name": "Armstrong Creek & Marshall",
+      "suburbs": [
+        "Armstrong Creek",
+        "Charlemont",
+        "Marshall"
+      ],
+      "corridors": "Growing precinct with CDC Victoria bus connections expanding. Road access via Princes Freeway and Geelong Ring Road. Major new residential development area south-west of Geelong with future transport infrastructure planned.",
+      "alias": "G15 – Armstrong Creek & Marshall",
+      "connects": [
+        "G16",
+        "G18"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G16",
+      "name": "Grovedale",
+      "suburbs": [
+        "Mount Duneed",
+        "Grovedale",
+        "Marshall"
+      ],
+      "corridors": "CDC Victoria buses connect to surrounding districts. Princes Freeway provides major road access to Melbourne. Torquay Road connects to the Surf Coast. Growing residential and commercial precinct.",
+      "alias": "G16 – Grovedale",
+      "connects": [
+        "G13",
+        "G14",
+        "G15",
+        "G17"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G17",
+      "name": "Lovely Banks",
+      "suburbs": [
+        "Lovely Banks",
+        "Moorabool"
+      ],
+      "corridors": "Princes Freeway connects to western Geelong and Melbourne. Local roads and arterials provide connectivity. Residential area with semi-rural character at Geelong's western fringe.",
+      "alias": "G17 – Lovely Banks",
+      "connects": [
+        "G16",
+        "G18"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G18",
+      "name": "Lara",
+      "suburbs": [
+        "Lara",
+        "Avalon"
+      ],
+      "corridors": "V/Line Lara Station on the Geelong Line provides commuter rail access to Melbourne CBD. Princes Freeway provides direct freeway access. Key gateway between Geelong and Western Melbourne suburbs. Near Avalon Airport.",
+      "alias": "G18 – Lara",
+      "connects": [
+        "G15",
+        "G17",
+        "G19",
+        "OW2"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G19",
+      "name": "Avalon & Point Wilson",
+      "suburbs": [
+        "Avalon",
+        "Point Wilson"
+      ],
+      "corridors": "Located west of Lara on Princes Freeway corridor. Bellarine Highway provides alternative road access toward the Bellarine Peninsula. Near Avalon Airport with potential future development.",
+      "alias": "G19 – Avalon & Point Wilson",
+      "connects": [
+        "G18",
+        "G20",
+        "G21"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G20",
+      "name": "Barwon Heads",
+      "suburbs": [
+        "Barwon Heads",
+        "Connewarre",
+        "Breamlea"
+      ],
+      "corridors": "CDC Victoria buses connect the southern Bellarine coastal communities. Bellarine Highway is the main road corridor. Barwon Heads village shopping strip and foreshore. Scenic coastal and recreational destination.",
+      "alias": "G20 – Barwon Heads",
+      "connects": [
+        "G14",
+        "G19",
+        "G21"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G21",
+      "name": "Portarlington & East Bellarine",
+      "suburbs": [
+        "Portarlington",
+        "Indented Head",
+        "St Leonards",
+        "Clifton Springs"
+      ],
+      "corridors": "CDC Victoria buses service the eastern Bellarine coastal strip. Bellarine Highway is the main transport corridor. Portarlington has a ferry to Docklands. Scenic beach towns with local shopping strips.",
+      "alias": "G21 – Portarlington & East Bellarine",
+      "connects": [
+        "G19",
+        "G20",
+        "G22"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G22",
+      "name": "Upper Bellarine",
+      "suburbs": [
+        "Bellarine",
+        "Drysdale",
+        "Clifton Springs",
+        "Curlewis"
+      ],
+      "corridors": "CDC Victoria buses connect the inland Bellarine communities. Bellarine Highway and local roads provide connectivity. Drysdale is the main service centre with local retail.",
+      "alias": "G22 – Upper Bellarine",
+      "connects": [
+        "G21",
+        "G23"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G23",
+      "name": "Ocean Grove",
+      "suburbs": [
+        "Wallington",
+        "Ocean Grove",
+        "Marcus Hill",
+        "Mannerim"
+      ],
+      "corridors": "CDC Victoria buses service the western Bellarine beach communities. Surf Coast Highway and Bellarine Highway provide road access. Ocean Grove is a major coastal town with retail strips and surf beaches.",
+      "alias": "G23 – Ocean Grove",
+      "connects": [
+        "G22",
+        "G24"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "G24",
+      "name": "Queenscliff & Point Lonsdale",
+      "suburbs": [
+        "Swan Island",
+        "Queenscliff",
+        "Point Lonsdale",
+        "Swan Bay"
+      ],
+      "corridors": "CDC Victoria buses connect to Queenscliff regional hub. Bellarine Highway terminus. Queenscliff-Sorrento ferry service connects to the Mornington Peninsula. Historic township with tourism focus.",
+      "alias": "G24 – Queenscliff & Point Lonsdale",
+      "connects": [
+        "G23"
+      ],
+      "zone": "Geelong & Bellarine"
+    },
+    {
+      "cc": "OW1",
+      "name": "Werribee South Gateway",
+      "suburbs": [
+        "Werribee South",
+        "Point Cook"
+      ],
+      "corridors": "Bus routes connect to Williams Landing and Laverton stations via Point Cook Road and Princes Freeway. Werribee South is a semi-rural pocket with market gardens and foreshore access.",
+      "alias": "OW1 – Werribee South Gateway",
+      "connects": [
+        "OW2",
+        "OW4",
+        "OW5"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW2",
+      "name": "Werribee Hub",
+      "suburbs": [
+        "Werribee",
+        "Wyndham Vale"
+      ],
+      "corridors": "Werribee Station (Werribee Line) provides frequent metro services to Melbourne CBD. Wyndham Vale Station serves V/Line regional services. Pacific Werribee is the major regional shopping centre. Princes Freeway provides road access.",
+      "alias": "OW2 – Werribee Hub",
+      "connects": [
+        "OW1",
+        "OW3",
+        "OW4",
+        "G18"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW3",
+      "name": "Manor Lakes",
+      "suburbs": [
+        "Wyndham Vale",
+        "Mambourin",
+        "Manor Lakes"
+      ],
+      "corridors": "Manor Lakes Station provides rail access via the Wyndham Vale branch. Ballan Road and local roads connect to surrounding areas. Growing residential precinct with emerging local retail.",
+      "alias": "OW3 – Manor Lakes",
+      "connects": [
+        "OW2",
+        "OW10"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW4",
+      "name": "Williams Landing Hub",
+      "suburbs": [
+        "Hoppers Crossing",
+        "Tarneit",
+        "Williams Landing"
+      ],
+      "corridors": "Williams Landing Station (Werribee Line) provides rapid CBD access. Hoppers Crossing Station via bus connections. Bus interchange with multiple routes. Pacific Werribee and Hoppers Crossing shopping strip accessible via Morris Road.",
+      "alias": "OW4 – Williams Landing Hub",
+      "connects": [
+        "OW1",
+        "OW2",
+        "OW5",
+        "OW7"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW5",
+      "name": "Point Cook Gateway",
+      "suburbs": [
+        "Point Cook",
+        "Seabrook",
+        "Altona Meadows"
+      ],
+      "corridors": "Bus routes connect to Williams Landing and Laverton stations via Point Cook Road. Local shopping strips along arterial roads. Growing residential area with strong family-oriented character.",
+      "alias": "OW5 – Point Cook Gateway",
+      "connects": [
+        "OW1",
+        "OW4",
+        "OW6"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW6",
+      "name": "Altona Meadows",
+      "suburbs": [
+        "Altona Meadows",
+        "Altona"
+      ],
+      "corridors": "Altona Station (Werribee Line via Altona Loop) provides direct metro access. Pier Street Altona shopping strip with cafes and local retail. Access to Altona Beach and foreshore recreation.",
+      "alias": "OW6 – Altona Meadows",
+      "connects": [
+        "OW5",
+        "OW8",
+        "W1"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW7",
+      "name": "Williams Landing-Truganina",
+      "suburbs": [
+        "Williams Landing",
+        "Truganina"
+      ],
+      "corridors": "Williams Landing Station (Werribee Line) as primary transport hub. Princes Freeway and local roads (Sayers Road, Sneydes Road) connect growing areas. Emerging town centre with new retail.",
+      "alias": "OW7 – Williams Landing-Truganina",
+      "connects": [
+        "OW4",
+        "OW9",
+        "OW12"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW8",
+      "name": "Altona Foreshore",
+      "suburbs": [
+        "Altona",
+        "Seaholme",
+        "Williamstown North"
+      ],
+      "corridors": "Seaholme and Altona stations (Werribee Line) provide metro access. Pier Street shopping and beachside recreation. Local bus connections to Williamstown.",
+      "alias": "OW8 – Altona Foreshore",
+      "connects": [
+        "OW6",
+        "W1",
+        "IW5"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW9",
+      "name": "Laverton Hub",
+      "suburbs": [
+        "Laverton",
+        "Altona",
+        "Laverton North"
+      ],
+      "corridors": "Laverton and Aircraft stations (Werribee Line) provide metro connectivity. Aviation Road shopping and facilities. Princes Freeway access. Regional logistics and industrial hub in Laverton North.",
+      "alias": "OW9 – Laverton Hub",
+      "connects": [
+        "OW7",
+        "OW8",
+        "W1",
+        "W2"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW10",
+      "name": "Rockbank West",
+      "suburbs": [
+        "Mount Cottrell",
+        "Fieldstone",
+        "Rockbank"
+      ],
+      "corridors": "Rockbank Station provides V/Line regional rail access via Ballarat and Geelong lines. Western Freeway provides regional road corridor. Growing residential area with semi-rural character transitioning to suburban.",
+      "alias": "OW10 – Rockbank West",
+      "connects": [
+        "OW3",
+        "OW11",
+        "OW12"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW11",
+      "name": "Aintree Growth",
+      "suburbs": [
+        "Aintree",
+        "Rockbank",
+        "Deanside"
+      ],
+      "corridors": "Bus routes connect to Rockbank Station and regional network. Western Freeway corridor. Growing residential area with emerging local centres and new community infrastructure.",
+      "alias": "OW11 – Aintree Growth",
+      "connects": [
+        "OW10",
+        "OW12"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW12",
+      "name": "Deer Park-Derrimut",
+      "suburbs": [
+        "Ravenhall",
+        "Deer Park",
+        "Derrimut"
+      ],
+      "corridors": "Deer Park Station (Sunbury Line via Metro Tunnel) provides metro and V/Line interchange. Western Ring Road and Derrimut Road form the logistics corridor. Derrimut Village Shopping Centre.",
+      "alias": "OW12 – Deer Park-Derrimut",
+      "connects": [
+        "OW7",
+        "OW10",
+        "OW11",
+        "OW13",
+        "W3"
+      ],
+      "zone": "Outer West"
+    },
+    {
+      "cc": "OW13",
+      "name": "Sunshine West-Albion",
+      "suburbs": [
+        "Ardeer",
+        "Albion",
+        "Sunshine",
+        "Sunshine West"
+      ],
+      "corridors": "Sunshine Station (Sunbury Line via Metro Tunnel) with V/Line connections to Bendigo and Ballarat. Albion and Ardeer stations also on the Sunbury Line. Sunshine Plaza and Sunshine Marketplace shopping centres. Hampshire Road retail strip.",
+      "alias": "OW13 – Sunshine West-Albion",
+      "connects": [
+        "OW12",
+        "W3",
+        "W2"
+      ],
+      "zone": "Outer West"
+    }
+  ]
+}
